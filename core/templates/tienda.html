@@ -1,0 +1,86 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}
+<title>Tienda - Barber Shop Millenium</title>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style-tienda.css' %}" />
+{% endblock %}
+
+
+{% block body_superior %}
+<body>
+{% endblock %}
+
+
+
+{% block content %}
+<br>
+<main class="container">
+    
+  <div class="row justify-content-center">
+    <div class="col-12">
+        <br><br>
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == 'error' %}
+                <div class="alert alert-danger" role="alert">{{ message }}</div>
+                {% else %}
+                <div class="alert alert-success" role="alert">{{ message }}</div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% include "carrito.html" %}</div>
+        <div class="col-12">
+            <div class="titulocentral">
+                <h1>Tienda</h1>
+            </div>
+                <div class="row">
+                    {% load custom_filters %} {% for producto in productos %}
+                    <div class="col-md-4">
+                        <div class="card md-4" style="width: 300px">
+                            <img
+                            src="{{ producto.imagen.url }}"
+                            class="card-img-top"
+                            alt="{{ producto.nombreProducto }}"
+                            style="display: flex; text-align: center"
+                            />
+                            <div class="card-body">
+                            <h5 class="card-title">{{ producto.nombreProducto }}</h5>
+                            <p class="card-text"><b>Modelo: </b>{{ producto.modelo }}</p>
+                            <p class="card-text"><b>Marca: </b>{{ producto.marca }}</p>
+                            <p class="card-text"><b>Categoria: </b>{{ producto.categoria }}</p>
+                            <p class="card-text"><b>Stock: </b>{{ producto.stock }}</p>
+                            <h2>${{ producto.precio|format_price }} CLP</h2>
+                                <div class="d-flex justify-content-center">
+                                    <div class="btn-group-sm">
+                                    <a
+                                        href="{% url 'detalle' producto.idProducto %}"
+                                        class="btn btn-sm btn mr-2"
+                                        >Ver Detalles del Producto</a
+                                    >
+                                    <a
+                                        href="{% url 'agregar' producto.idProducto %}"
+                                        class="btn btn-sm btn mr-2"
+                                        >Agregar al Carro</a
+                                    >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-12">{% include "carrito.html" %}</div>
+  </div>
+</main>
+
+
+
+   
+<br>
+{% endblock %}
+

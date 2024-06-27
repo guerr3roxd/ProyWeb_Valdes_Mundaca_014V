@@ -1,0 +1,46 @@
+<div role="alert">
+    <main class="container">
+        <h2>Registrar Usuario</h2>
+
+        <form action="#" method="POST">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="{{ form.username.id_for_label }}">{{ form.username.label }}</label><br>
+                {{ form.username }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.first_name.id_for_label }}">{{ form.first_name.label }}</label><br>
+                {{ form.first_name }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.last_name.id_for_label }}">{{ form.last_name.label }}</label><br>
+                {{ form.last_name }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label><br>
+                {{ form.email }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.password1.id_for_label }}">{{ form.password1.label }}</label><br>
+                {{ form.password1 }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.password2.id_for_label }}">{{ form.password2.label }}</label><br>
+                {{ form.password2 }}
+            </div>
+
+            <div class="form-group button-container">
+                <a href="{% url 'login' %}" class="btn btn-link">Login</a> |
+                <a href="{% url 'index' %}" class="btn btn-link">Inicio</a>
+                <br><br>
+                <input type="submit" value="Registrar" class="btn btn-outline-primary">
+            </div>
+        </form>
+    </main>
+</div>

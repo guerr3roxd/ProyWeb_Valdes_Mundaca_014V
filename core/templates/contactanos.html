@@ -1,0 +1,69 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style-contactanos.css' %}" />
+{% endblock %}
+
+
+{% block title %}
+<title>Contactanos - Barber Shop Millenium</title>
+{% endblock %}
+
+{% block body_superior %}
+<body onload="mostrarClima()">
+{% endblock %}
+{% block content %}
+<div class="container formulario" onload="mostrarClima()">
+        <div class="titulocentral">
+            <h1>Formulario de Registro</h1>
+
+
+
+            <h5>Piensas venir? aquí tienes el pronóstico del Clima<br>para los Proximos 7 días</h5>
+            </div>
+
+            
+            <table class="table container">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Clima</th>
+                        <th>Temperatura Mínima</th>
+                        <th>Temperatura Máxima</th>
+                    </tr>
+                </thead>
+                <tbody id="weather-forecast">
+                    <!-- Los datos del clima se insertarán aquí -->
+                </tbody>
+            </table>
+        <h2 class="ingresedatos">Ingrese sus datos</h2>
+        <br>
+        <form id="datos-cli">
+            <label for="nom"><i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> Nombres: </label>
+            <input type="text" id="nom" name="nom" placeholder="Ingrese sus nombres" class="form-control" required    minlength="3">
+
+            <label for="ape"><i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> Apellidos: </label>
+            <input type="text" id="ape" name="ape" placeholder="Ingrese sus Apellidos" class="form-control" required minlength="4">
+
+            <label for="correo"><i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> Correo: </label>
+            <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" class="form-control" required>
+
+            <label for="telefono"><i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> Teléfono: </label>
+            <input type="text" id="telefono" name="telefono" placeholder="Ingrese su teléfono" class="form-control" required minlength="9" maxlength="11">
+
+            <label for="fecha"><i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> Fecha de reserva: </label>
+            <input type="date" id="fecha" name="fecha" class="form-control" required>
+
+            <div class="button-container">
+                <button class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <br>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/validandoformulario.js' %}"></script>
+<script src="{% static 'js/apiclima.js' %}"></script>
+{% endblock %}

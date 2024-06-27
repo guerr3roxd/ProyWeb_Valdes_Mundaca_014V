@@ -1,0 +1,68 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+
+{% block title %}
+<title>Productos - Barber Shop Millenium</title>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style-productos.css' %}"/>
+{% endblock %}
+
+
+{% block body_superior %}
+<body>
+{% endblock %}
+{% block content %}
+
+    {% if messages %}
+        <div class="alert alert-success" role="alert">
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+        </div>
+    {% endif %}
+    <main class="container-fluid">
+        <h1>Productos</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>SKU: </th> 
+                    <th>Nombre: </th> 
+                    <th>Marca: </th> 
+                    <th>Modelo: </th> 
+                    <th>Precio: </th> 
+                    <th>Descripción: </th> 
+                    <th>Stock</th> 
+                    <th>Categoria</th> 
+                    <th>Imagen</th>
+                    <th>Actualizar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for producto in datos %}
+                    <tr>
+                        <td><a href="{% url 'detalle' producto.idProducto %}" class="btn btn-outline-info">{{ producto.idProducto }}</a></td>
+                        <td>{{ producto.nombreProducto  }}</td>
+                        <td>{{ producto.marca }}</td>
+                        <td>{{ producto.modelo }}</td>
+                        <td>{{ producto.precio }}</td>
+                        <td>{{ producto.descripcion }}</td>
+                        <td>{{ producto.stock }}</td>
+                        <td>{{ producto.categoria.nombreCategoria  }}</td>
+                        <td><img src="{{ producto.imagen.url }}" style="width: 70px; height: 70px;"></td>
+                        <td><a href="{% url 'modificar' producto.idProducto %}" class="btn btn-warning">Actualizar</a></td>
+                        <td><a href="{% url 'eliminarProd' producto.idProducto %}" class="btn btn-danger">Eliminar</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'crear' %}" class="btn btn-primary mb-6">Registrar Producto</a>
+
+    </main>
+    
+    <br><br><br>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+
+{% block title %}
+<title>Modificar Producto - Barber Shop Millenium</title>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style-modificar.css' %}"/>
+{% endblock %}
+
+
+{% block body_superior %}
+<body>
+{% endblock %}
+
+
+{% block content %}
+    {% if messages %}
+    <div class="alert alert-danger" role="alert">
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="formulario">
+        <main class="container">
+            <div class="titulocentral"><h1>Modificar Producto</h1></div>
+            <br>
+        
+            <form action="#" method="POST" enctype="multipart/form-data" id="formulario">
+    
+            {% csrf_token %}
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ forModificar.idProducto.label}}
+                {{ forModificar.idProducto}}
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ forModificar.nombreProducto.label}}
+                {{ forModificar.nombreProducto}}
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ forModificar.marca.label}}
+                {{ forModificar.marca}}
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ forModificar.modelo.label}}
+                {{ forModificar.modelo}}
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ forModificar.precio.label}}
+                {{ forModificar.precio}}
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ forModificar.descripcion.label}}
+                {{ forModificar.descripcion}}
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ forModificar.stock.label}}
+                {{ forModificar.stock}}
+            </div>
+
+            {% if Producto.imagen %}
+            <img src="{{ Producto.imagen.url }}" width="200px">
+            <br> <br>
+            {% else %}
+            <br><br>
+            <h4 style="color:red">Producto sin foto</h4>
+            {% endif %}
+                <div class="form-group">
+                    {{ forModificar.imagen.label }}
+                    <br>
+                    {{ forModificar.imagen}}
+                </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ forModificar.categoria.label}}
+                {{ forModificar.categoria}}
+            </div>
+
+            <input type="submit" value="Modificar" class="btn btn-success">
+        </form>
+<br><br>
+
+        </main>
+    </div>
+</body>
+{% endblock %}

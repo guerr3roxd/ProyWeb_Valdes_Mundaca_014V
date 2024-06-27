@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+body {
+	background-color: #292929;
+	line-height: 1;
+	font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+	background-color: #b28e6d;
+
+}
+
+.navbar img {
+	width: 256px;
+	height: 200px;
+	border: 2px solid black;
+}
+
+.navbar-brand img {
+	position: content-box;
+	left: 0;
+	top: 0;
+	width: 150px;
+	height: auto;
+	border-radius: 50%;
+}
+
+.navbar img:hover {
+	border: 2px solid red;
+}
+
+.nav-item a.nav-link {
+	color: black;
+}
+
+.nav-item a.nav-link:hover {
+	color: red;
+}
+
+#userMillenium{
+	color: #292929;
+	font-size: 16px;
+	text-decoration: none;
+	padding-right: 50px;
+	
+}
+
+#userMillenium:hover{
+	color: #0612b3;
+	font-size: 16px;
+	text-decoration: none;
+	padding-right: 50px;
+	
+}
+
+#userMillenium img{
+	position: content-box;
+	left: 0;
+	top: 0;
+	width: 50px;
+	height: auto;
+	border-radius: 50%;
+}
+
+#userMillenium img:hover{
+	border: 2px solid rgb(53, 53, 53);
+}
+
+
+.titulocentral h1 {
+	padding-top: 25px;
+	text-align: center;
+	font-size: 40px;
+	font-family: "Poppins", sans-serif;
+	font-weight: bolder;
+	color: white;
+	padding-bottom: 20px;
+}
+
+
+
+.card-title {
+    height: 3.5em; /* Ajusta esta altura según tus necesidades */
+    display: flex;
+    align-items: center;
+    color: #ffffff; /* Color del texto actualizado */
+}
+
+.card-body {
+    padding-bottom: 20px; /* Ajusta este valor según tus necesidades */
+    color: #ffffff; /* Color del texto actualizado */
+}
+
+.card h2{
+    text-align: center;
+    color: #1f1901; /* Color del texto actualizado */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+.card {
+    background-color: #b28e6d; /* Fondo de la tarjeta actualizado */
+    color: #ffffff; /* Color del texto actualizado */
+    font-family: 'Poppins', sans-serif; /* Fuente actualizada */
+    margin: 30px;
+    border-radius: 2%;
+}
+
+.card img{
+    border-radius: 5%; 
+    width: 288px; 
+    height: 288px;
+    border-color: gray solid 1px;
+    display: block;
+    margin: 5px;
+}
+
+/* Aumenta la especificidad y usa !important para asegurar la aplicación del estilo */
+/* Estilos comunes para ambos botones */
+a.btn.btn-sm.btn[href*="detalle"], a.btn.btn-sm.btn[href*="agregar"] {
+    font-size: 12px !important;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-weight: 500;
+    width: 100px; 
+    height: 50px;
+}
+
+/* Botón de "Agregar al Carro" */
+a.btn.btn-sm.btn[href*="agregar"] {
+    background-color: #995918; /* Color del botón */
+    border: none;
+    text-align: center;
+    padding: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a.btn.btn-sm.btn[href*="agregar"]:hover {
+    background-color: #653b10; /* Color de hover */
+}
+
+/* Botón de "Ver Detalles del Producto" */
+a.btn.btn-sm.btn[href*="detalle"] {
+    background-color: #a46497; /* Color del botón */
+    border: none;
+    text-align: center;
+    padding: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a.btn.btn-sm.btn[href*="detalle"]:hover {
+    background-color: #714468; /* Color de hover */
+}
+
+
+
+
+.table {
+    background-color: #b28e6d; 
+    font-family: "Roboto", sans-serif; 
+}
+
+.table th, .table td {
+    border: 1px solid #ddd; 
+    padding: 8px;
+    color: white;
+    background-color: #b28e6d;
+}
+
+.table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #b28e6d;
+    color: white;
+}
+
+.table img {
+    border: 1px solid #ddd;
+    border-radius: 10px; 
+}
+
+
+
+
+/* Aumenta la especificidad y usa !important para asegurar la aplicación del estilo */
+/* Estilos comunes para ambos botones */
+a.btn.btn-sm.btn-block[href*="limpiar"], a.btn.btn-sm.btn-block[href*="tienda"], a.btn.btn-sm.btn-block[href*="generarBoleta"] {
+    font-size: 12px !important;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-weight: 500;
+    width: auto; 
+    height: 50px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 50px;
+}
+
+/* Botón de "Borrar Carrito" */
+a.btn.btn-sm.btn-block[href*="limpiar"] {
+    background-color: #ff0000; /* Color del botón */
+    border: none;
+    text-align: center;
+    padding: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a.btn.btn-sm.btn-block[href*="limpiar"]:hover {
+    background-color: #a63c3c; /* Color de hover */
+}
+
+/* Botón de "Seguir Comprando" */
+a.btn.btn-sm.btn-block[href*="tienda"] {
+    background-color: #4a90e2; /* Color del botón*/
+    border: none;
+    text-align: center;
+    padding: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a.btn.btn-sm.btn-block[href*="tienda"]:hover {
+    background-color: #3b7bbf; /* Color de hover*/
+}
+
+/* Botón de "Generar Boleta" */
+a.btn.btn-sm.btn-block[href*="generarBoleta"] {
+    background-color: #6dbf47; /* Color del botón*/
+    border: none;
+    text-align: center;
+    padding: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a.btn.btn-sm.btn-block[href*="generarBoleta"]:hover {
+    background-color: #5ca63c; /* Color de hover*/
+}
+
+
+
+
+.footer {
+	padding: 50px 0;
+	color: black;
+	background-color: #b28e6d;
+	line-height: 1.5;
+	font-family: "Poppins", sans-serif;
+}
+
+.footer h3 {
+	margin-top: 0;
+	margin-bottom: 12px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.footer ul {
+	padding: 0;
+	list-style: none;
+	line-height: 1.6;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+.footer ul a {
+	color: inherit;
+	text-decoration: none;
+	opacity: 1;
+}
+
+.footer ul a:hover {
+	opacity: 1;
+}
+
+.footer.item.text p {
+	opacity: 1;
+	margin-bottom: 0;
+	font-size: 14px;
+}
+
+.footer .item.social {
+	text-align: center;
+}
+
+footer img {
+	position: content-box;
+	left: 0;
+	top: 0;
+	width: 150px;
+	height: auto;
+	border-radius: 50%;
+	border: 2px solid black;
+}
+
+footer img:hover {
+	border: 2px solid red;
+}
+
+.footer .item.social > a {
+	font-size: 20px;
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	box-shadow: 0 0 0 1px black;
+	margin: 0 8px;
+	color: black;
+	opacity: 1;
+}
+
+.footer .item.social > a:hover {
+	opacity: 0.9;
+}
+
+.footer .copyright {
+	text-align: center;
+	padding-top: 24px;
+	opacity: 1;
+	font-size: 13px;
+	margin-bottom: 0;
+}

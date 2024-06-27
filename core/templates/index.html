@@ -1,0 +1,143 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}
+<title>Inicio - Barber Shop Millenium</title>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style-index.css' %}" />
+{% endblock %}
+
+
+{% block body_superior %}
+<body>
+{% endblock %}
+{% block content %}
+<main class="container"> <!--Titulo de la pagina -->
+    <div class="titulocentral">
+        <h1>Nuestra misión</h1>
+    </div>
+
+    <div class="experiencias">
+        <p class="defexp">
+            En Barber Shop Millenium, nos enorgullece ofrecer una amplia gama de servicios de barbería 
+            diseñados para satisfacer las necesidades y preferencias de nuestros clientes. Desde cortes de 
+            pelo clásicos hasta los estilos más modernos y atrevidos, nuestro equipo de barberos expertos 
+            está comprometido a brindar resultados excepcionales en cada visita. Además de nuestros 
+            servicios de corte de pelo y afeitado, también ofrecemos tratamientos de cuidado capilar, como 
+            hidratación, tratamientos para el cuero cabelludo y servicios de coloración.
+            <br><br>
+            Nuestro compromiso con la excelencia va más allá de los servicios de barbería. En Barber Shop 
+            Millenium, nos esforzamos por crear un ambiente acogedor y relajante donde nuestros clientes se 
+            sientan bienvenidos y cómodos. Desde el momento en que ingresan a nuestro local, son recibidos 
+            con calidez y profesionalismo, y nuestro equipo se dedica a proporcionar una experiencia de 
+            barbería personalizada y memorable en cada visita.
+        </p>
+
+
+        
+    </div>
+
+    <div class="container">  <!--Diferenciales de la barberia-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="diferenciales">
+                    <h3 class="titulo-centralizado-2">Diferenciales</h3>
+                    <ul class="lidiferenciales list-unstyled">
+                        <li class="items">Atención personalizada a los clientes</li>
+                        <li class="items">Espacio dedicado</li>
+                        <li class="items">Localización privilegiada</li>
+                        <li class="items">Profesionales calificados</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    id="demo"
+                    class="carousel slide carousel-container"
+                    data-bs-ride="carousel"
+                >
+                    <!-- Carousel indicators -->
+                    <div class="carousel-indicators">
+                        <button
+                            type="button"
+                            data-bs-target="#demo"
+                            data-bs-slide-to="0"
+                            class="active"
+                        ></button>
+                        <button
+                            type="button"
+                            data-bs-target="#demo"
+                            data-bs-slide-to="1"
+                        ></button>
+                        <button
+                            type="button"
+                            data-bs-target="#demo"
+                            data-bs-slide-to="2"
+                        ></button>
+                    </div>
+
+                    <!-- Carousel inner -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img
+                                src="{% static 'img/diferenciales.jpg' %}"
+                                class="imgcarousel d-block w-100"
+                                alt="Diferenciales"
+                            />
+                        </div>
+                        <div class="carousel-item">
+                            <img
+                                src="{% static 'img/herramientas.jpg' %}"
+                                class="imgcarousel d-block w-100"
+                                alt="Herramientas de Barber"
+                            />
+                        </div>
+                        <div class="carousel-item">
+                            <img
+                                src="{% static 'img/barberia-actual.jpg' %}"
+                                class="imgcarousel d-block w-100"
+                                alt="Barberia Actual"
+                            />
+                        </div>
+                    </div>   
+
+                    <!-- Carousel controls -->
+                    <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#demo"
+                        data-bs-slide="prev"
+                    >
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#demo"
+                        data-bs-slide="next"
+                    >
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="ultimoscortes">   <!--Fotos de cortes recien realizados-->
+
+        <h5>ULTIMOS CORTES REALIZADOS</h5>
+        <img src="{% static 'img/ultimocorte1.jpg' %}" alt="Corte 1" class="imgcorte" />
+        <img src="{% static 'img/ultimocorte2.jpg' %}" alt="Corte 2" class="imgcorte" />
+        <img src="{% static 'img/ultimocorte3.jpg' %}" alt="Corte 3" class="imgcorte" />
+        <img src="{% static 'img/ultimocorte4.jpg' %}" alt="Corte 4" class="imgcorte" />
+        <img src="{% static 'img/ultimocorte5.jpg' %}" alt="Corte 5" class="imgcorte" />
+
+    </div>
+
+    </main>
+{% endblock %}
+

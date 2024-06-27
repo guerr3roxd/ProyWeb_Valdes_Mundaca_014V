@@ -1,0 +1,44 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}
+<title>{{ producto.nombreProducto }} - Barber Shop Millenium</title>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style-detalle.css' %}" />
+{% endblock %}
+
+
+{% block body_superior %}
+<body>
+{% endblock %}
+{% block content %}
+        <br><br>
+        <main class="container">
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1>{{ producto.nombreProducto }}</h1>
+                        </div>
+                        <img src="{{ producto.imagen.url }}" alt="producto" class="card-img-top imagenProd">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>SKU: </b>{{ producto.idProducto }}</h5>
+                            <p class="card-text"><b>Marca: </b>{{ producto.marca }}</p>
+                            <p class="card-text"><b>Modelo: </b>{{ producto.modelo }}</p>
+                            <p class="card-text">$ {{ producto.precio }} CLP</p>
+                            <p class="card-text"><b>Descripción: </b>{{ producto.descripcion }}</p>
+                            <p class="card-text"><b>Unidades en Stock: </b>{{ producto.stock }}</p>
+                            <p class="card-text"><b>Categoria: </b>{{ producto.categoria.nombreCategoria }}</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+    
+        {% endblock %}

@@ -1,0 +1,54 @@
+{
+    "cortes": [
+      {
+        "nombreCorte": "Corte de pelo degradado (Fade)",
+        "imagenCorte": "./img/Cortes/Fade.webp",
+        "descripcionCorte": "El corte de pelo degradado es uno de los estilos más populares en las barberías modernas. Se caracteriza por un cambio gradual en la longitud del cabello, generalmente más corto en los lados y la parte trasera y más largo en la parte superior."
+      },
+      {
+        "nombreCorte": "Corte Pompadour",
+        "imagenCorte": "./img/Cortes/Pompadour.webp",
+        "descripcionCorte": "El corte Pompadour es un estilo clásico que presenta cabello más largo en la parte superior, peinado hacia atrás y ligeramente hacia arriba para crear volumen y estilo. Los lados suelen ser más cortos para resaltar la parte superior."
+      },
+      {
+        "nombreCorte": "Corte Undercut",
+        "imagenCorte": "./img/Cortes/Undercut.webp",
+        "descripcionCorte": "El corte Undercut es un estilo audaz que implica un contraste marcado entre el cabello corto en los lados y la parte trasera y el cabello más largo en la parte superior. Es versátil y se puede adaptar a diferentes longitudes y texturas de cabello."
+      },
+      {
+        "nombreCorte": "Corte Buzz",
+        "imagenCorte": "./img/Cortes/Buzz.webp",
+        "descripcionCorte": "El corte Buzz es un estilo corto y uniforme en el que se corta el cabello a la misma longitud con una máquina de cortar. Es un estilo fácil de mantener y es popular entre hombres que prefieren un aspecto más limpio y bajo mantenimiento."
+      },
+      {
+        "nombreCorte": "Corte Quiff",
+        "imagenCorte": "./img/Cortes/Quiff.webp",
+        "descripcionCorte": "El corte Quiff es similar al Pompadour pero con un acabado más despeinado y moderno. Presenta cabello más largo en la parte superior, peinado hacia atrás y hacia un lado para crear volumen y textura."
+      },
+      {
+        "nombreCorte": "Corte Crew Cut",
+        "imagenCorte": "./img/Cortes/CrewCut.webp",
+        "descripcionCorte": "El corte Crew Cut es un estilo clásico y atemporal que implica cabello corto en los lados y la parte trasera, con una longitud ligeramente más larga en la parte superior. Es un estilo práctico y versátil que se adapta a casi todas las formas de cara."
+      },
+      {
+        "nombreCorte": "Corte Caesar",
+        "imagenCorte": "./img/Cortes/Caesar.webp",
+        "descripcionCorte": "El corte Caesar es un estilo corto y estructurado que presenta flequillo corto y una textura definida en la parte superior. Es un estilo elegante y refinado que puede adaptarse a diferentes tipos de cabello."
+      },
+      {
+        "nombreCorte": "Corte Ivy League",
+        "imagenCorte": "./img/Cortes/IvyLeague.webp",
+        "descripcionCorte": "El corte Ivy League es una versión más larga y refinada del corte Crew Cut, con cabello ligeramente más largo en la parte superior y los lados. Es un estilo clásico que transmite un aspecto pulido y sofisticado."
+      },
+      {
+        "nombreCorte": "Corte French Crop",
+        "imagenCorte": "./img/Cortes/FrenchCrop.webp",
+        "descripcionCorte": "El corte French Crop es un estilo corto y texturizado que presenta flequillo más largo en la parte delantera y lados cortos y texturizados. Es un estilo moderno y fácil de peinar que se adapta a la mayoría de las formas de cara."
+      },
+      {
+        "nombreCorte": "Corte Slick Back",
+        "imagenCorte": "./img/Cortes/SlickBack.webp",
+        "descripcionCorte": "El corte Slick Back es un estilo elegante y pulido en el que el cabello se peina hacia atrás de manera uniforme para crear un aspecto suave y sofisticado. Es ideal para hombres que buscan un estilo clásico y refinado."
+      }
+    ]
+  }

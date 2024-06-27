@@ -1,0 +1,82 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}
+<title>Eliminar Producto - Barber Shop Millenium</title>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style-eliminar.css' %}" />
+{% endblock %}
+
+{% block body_superior %}
+<body>
+{% endblock %}
+
+
+{% block content %}
+    {% if messages %}
+    <div class="alert alert-danger" role="alert">
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="formulario">
+        <main class="container">
+            <div class="titulocentral"><h1>Modificar Producto</h1></div>
+            <br>
+        
+            <form action="#" method="POST" enctype="multipart/form-data" id="formulario">
+    
+            {% csrf_token %}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="idProducto"><b>SKU:</b></label>
+                    <p>{{ producto.idProducto }}</p>
+                </div>
+                <div class="form-group">
+                    <label for="nombreProducto"><b>Nombre del Producto:</b></label>
+                    <p>{{ producto.nombreProducto }}</p>
+                </div>
+                <div class="form-group">
+                    <label for="marca"><b>Marca:</b></label>
+                    <p>{{ producto.marca }}</p>
+                </div>
+            </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="modelo"><b>Modelo:</b></label>
+                        <p>{{ producto.modelo }}</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="precio"><b>Precio:</b></label>
+                        <p>{{ producto.precio }}</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="stock"><b>Cantidad en stock:</b></label>
+                        <p>{{ producto.stock }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="descripcion"><b>Descripción:</b></label>
+                <p>{{ producto.descripcion }}</p>
+            </div>
+            <div class="form-group">
+                <label for="imagen"><b>Imagen:</b></label>
+                <img src="{{ producto.imagen.url }}" alt="Imagen del producto" class="img-fluid">
+            </div>
+            <div class="form-group btn-container text-center">
+                <button type="submit" class="btn btn-outline-danger col-md-5">Eliminar</button>
+                <a href="{% url 'productos' %}" class="btn btn-outline-primary col-md-5">Cancelar</a>
+            </div>
+        </div>
+    </form>
+    <br><br>
+    
+            </main>
+    </body>
+    {% endblock %}

@@ -1,0 +1,68 @@
+<div class="titulocentral">
+    <h1>Carrito de Compras</h1>
+</div>
+    <div role="alert">
+        <table class="table table-bordered alert alert-warning">
+            <thead>
+                <tr scope="row">
+                    <td colspan="6" style="font-weight:bold; color:black; font-size:25px; text-align: center;">CARRITO</td>
+                </tr>
+                <tr>
+                    <th style="font-size:15px; font-weight: bold; color:black; text-align: center;">SKU</th>
+                    <th style="font-size:15px; font-weight: bold; color:black; text-align: center;">NOMBRE</th>
+                    <th style="font-size:15px; font-weight: bold; color:black; text-align: center;">MARCA</th>
+                    <th style="font-size:15px; font-weight: bold; color:black; text-align: center;">MODELO</th>
+                    <th style="font-size:15px; font-weight: bold; color:black; text-align: center;">CANTIDAD</th>
+                    <th style="font-size:15px; font-weight: bold; color:black; text-align: center;">SUBTOTAL</th>
+            
+                </tr>
+            </thead>
+            <tbody>
+                {% if request.session.carrito.items %}
+                {% for key, value in request.session.carrito.items %}
+                <tr>
+                    <td style="font-size:13px; text-align: center;">{{ value.producto_id }}</td>
+                    <td style="font-size:13px; text-align: center;">{{ value.nombre }}</td>
+                    <td style="font-size:13px; text-align: center;">{{ value.marca }}</td>
+                    <td style="font-size:13px; text-align: center;">{{ value.modelo }}</td>
+                    <td style="font-size:13px; text-align: center;">{{ value.cantidad }}
+                        <br>
+                        <a href="{% url 'restar' value.producto_id %}" class="badge btn" style="font-size:15px;"><i class="fa-solid fa-cart-arrow-down fa-sm" style="color: #8f2d2d;"></i></a>
+                        <a href="{% url 'agregar' value.producto_id %}" class="badge btn" style="font-size:15px;"><i class="fa-solid fa-cart-plus fa-sm" style="color: #005eff;"></i></a>
+                    </td>
+                    <td style="font-size:13px; text-align: center;">$ {{ value.subtotal }} CLP</td>
+                    
+                    
+                </tr>
+                {% endfor %}
+                {% else %}
+                <tr>
+                    <td colspan="6">
+                        <div class="alert alert-info text-center" style="font-weight: bold;">Sin Productos</div>
+                    </td>
+                </tr>
+                {% endif %}
+                
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th colspan="9" style="font-size:15px; font-weight: bold; color:black; text-align: center;">Valor sin costos de envio</th>
+                    <tr>
+                        <td colspan="9" style="font-size:13px; text-align: center;">${{ total }} CLP</td>
+                    </tr>
+                </tr>
+        </table>
+        <hr>
+        <div class="row text-center">
+            <div class="col-4">
+                <a href="{% url 'limpiar' %}" class="btn btn-sm btn-block">Borrar Carrito</a>
+            </div>
+            <div class="col-4">
+                <a href="{% url 'tienda' %}" class="btn btn-sm btn-block">Seguir Comprando</a>
+            </div>
+            <div class="col-4">
+                <a href="{% url 'generarBoleta' %}" class="btn btn-sm btn-block">Finalizar Compra</a>
+            </div>
+        </div>
+    </div>

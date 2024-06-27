@@ -1,0 +1,20 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style-registro.css' %}" />
+{% endblock %}
+
+{% block body_superior %}
+<body>
+{% endblock %}
+{% block content %}
+<div class="container formulario">
+        {% include "registration/registrar.html" %}
+</div>
+<br>    
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/validaregistro.js' %}"></script>
+{% endblock %}

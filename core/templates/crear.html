@@ -1,0 +1,88 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}
+<title>Registrar Producto - Barber Shop Millenium</title>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style-crear.css' %}"/>
+{% endblock %}
+
+
+{% block body_superior %}
+<body>
+{% endblock %}
+
+
+{% block content %}
+    {% if messages %}
+    <div class="alert alert-danger" role="alert">
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+<div class="formulario">
+    <main class="container">
+        <div class="titulocentral"><h1>Registro de Productos</h1></div>
+        <br>
+    
+            <form action="#" method="POST" enctype="multipart/form-data" id="formulario">
+
+            {% csrf_token %}
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ productoForm.idProducto.label}}
+                {{ productoForm.idProducto}}
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ productoForm.nombreProducto.label}}
+                {{ productoForm.nombreProducto}}
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ productoForm.marca.label}}
+                {{ productoForm.marca}}
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ productoForm.modelo.label}}
+                {{ productoForm.modelo}}
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ productoForm.precio.label}}
+                {{ productoForm.precio}}
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ productoForm.descripcion.label}}
+                {{ productoForm.descripcion}}
+            </div>
+
+            <div class="form-group">
+                 <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ productoForm.stock.label}}
+                {{ productoForm.stock}}
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ productoForm.imagen.label}}
+                {{ productoForm.imagen}}
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-asterisk fa-2xs" style="color: #ff0000;"></i> {{ productoForm.categoria.label}}
+                {{ productoForm.categoria}}
+            </div>
+
+
+            <input type="submit" value="Registrar" class="btn btn-success">
+        </form>
+<br><br>
+
+        </main>
+    </div>
+</body>
+{% endblock %}

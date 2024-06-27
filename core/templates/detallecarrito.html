@@ -1,0 +1,57 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}
+<title>Detalle del carrito - Barber Shop Millenium</title>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style-detallecarrito.css' %}" />
+{% endblock %}
+
+
+{% block body_superior %}
+<body>
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <h3>Detalle de Compra</h3>
+        <br>
+        <h6>Fecha: {{ fecha }}</h6>
+        <h6>Usuario: {{ usuario.username }}</h6>
+        <h6>Estado: {{ estado }}</h6>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for producto in productos %}
+                <tr>
+                    <td>{{ producto.nombre }}</td>
+                    <td>{{ producto.marca }}</td>
+                    <td>{{ producto.modelo }}</td>
+                    <td>{{ producto.cantidad }}</td>
+                    <td>$ {{ producto.subtotal }} CLP</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <hr>
+        <div class="row">
+            <div class="col-6">
+                <h5>Precio sin costos de Envio: $ {{ total }} CLP</h5>
+
+                
+            </div>
+            <div class="col-6">
+                <h5>Total Final ($3.500 CLP Envio): $ {{ total_final }} CLP</h5>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

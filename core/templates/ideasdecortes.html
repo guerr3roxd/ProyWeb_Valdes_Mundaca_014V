@@ -1,0 +1,47 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}
+<title>Ideas de Cortes - Barber Shop Millenium</title>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style-cortes.css' %}" />
+{% endblock %}
+
+
+{% block body_superior %}
+<body onload="mostrarCortes()">
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="titulocentral">
+        <h1>Cortes que te podrían interesar</h1>
+        </div>
+    <table class="table container">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Imagen</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody id="cortes">
+
+
+
+            </tbody>
+    </table>
+
+
+
+</div>
+<br>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    const staticUrl = "{% static '' %}";
+</script>
+<script src="{% static 'js/mostrarcortesapi.js' %}"></script>
+{% endblock %}
